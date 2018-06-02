@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二手房首页</title>
+	<meta name="viewport" content="width=device-width, user-scalable=1.0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<script src="./js/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript" src="./js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/ershoufang.css">
+	<link rel="stylesheet" type="text/css" href="./css/swiper-3.4.2.min.css">
+</head>
+<body>
+	<div id="lianjia">
+		<div class="header clearfix">
+			<a href="#" class="position">北京&nbsp;<i class="drop"></i></a>
+			<a href="#" class="index"></a>
+			<a href="#" class="user"></a>
+		</div>
+		<div class="head_img">
+			<div class="search-btn">
+				<i></i>
+				<input type="text" placeholder="输入小区或商圈开始找房咯~">
+			</div>
+			<div class="ad">
+				<div class="swiper-container">
+				  <div class="swiper-wrapper clearfix">
+				    <!-- <a href="#" class="swiper-slide" v-for="item in bannerList"><img :src="item.img"></a> -->
+				    <a href="#" class="swiper-slide"><img src="./image/head_bg.jpg"></a>
+				    <a href="#" class="swiper-slide"><img src="./image/item.jpg"></a>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="tool">
+			<div class="tool-list">
+				<a href="#" class="tool-box"><div class="tool-icon zhineng"></div>智能找房</a>
+				<a href="#" class="tool-box"><div class="tool-icon quanbu"></div>全部房源</a>
+				<a href="#" class="tool-box"><div class="tool-icon huanfang"></div>换房地图</a>
+			</div>
+		</div>
+		<div class="recom-line">
+			<p>为您推荐</p>
+			<ul class="recom-list">
+				<li>
+					<a class="recom-item" href="#">
+						<div class="recom-img">
+						</div>
+						<img src="./image/head_bg.jpg">
+						<h2 class="title">适合小两口的生活之家</h2>
+						<h3 class="des">500万内帮您安家北京</h3>
+					</a>
+				</li>
+				<li>
+					<a class="recom-item" href="#">
+						<div class="recom-img">
+						</div>
+						<img src="./image/head_bg.jpg">
+						<h2 class="title">适合小两口的生活之家</h2>
+						<h3 class="des">500万内帮您安家北京</h3>
+					</a>
+				</li>
+				<li>
+					<a class="recom-item" href="#">
+						<div class="recom-img">
+						</div>
+						<img src="./image/head_bg.jpg">
+						<h2 class="title">适合小两口的生活之家</h2>
+						<h3 class="des">500万内帮您安家北京</h3>
+					</a>
+				</li>
+				<li>
+					<a class="recom-item" href="#">
+						<div class="recom-img">
+						</div>
+						<img src="./image/head_bg.jpg">
+						<h2 class="title">适合小两口的生活之家</h2>
+						<h3 class="des">500万内帮您安家北京</h3>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<ul class="house-type">
+			<li @click="mes=0" :class="{'type-active':mes===0}">
+				区域<i></i>
+			</li>
+			<li @click="mes=1" :class="{'type-active':mes===1}">
+				价格<i></i>
+			</li>
+			<li @click="mes=2" :class="{'type-active':mes===2}">
+				房型<i></i>
+			</li>
+			<li @click="mes=3" :class="{'type-active':mes===3}">
+				更多<i></i>
+			</li>
+		</ul>
+		<div class="child-list">
+			<div class="type-show" v-show="mes===0">
+				<ul class="type-child">
+					<li @click="msg=0" :class="{'active':msg===0}">区域</li>
+					<li @click="msg=1" :class="{'active':msg===1}">地铁</li>
+				</ul>
+				<ul class="type-child-child" v-show="msg===0">
+					<li>不限</li>
+					<li>东城</li>
+					<li>西城</li>
+					<li>朝阳</li>
+					<li>海淀</li>
+					<li>丰台</li>
+					<li>石景山</li>
+					<li>通州</li>
+					<li>昌平</li>
+					<li>大兴</li>
+					<li>10号线</li>
+				</ul>
+				<ul class="type-child-child" v-show="msg===1">
+					<li>不限</li>
+					<li>1号线</li>
+					<li>2号线</li>
+					<li>3号线</li>
+					<li>4号线</li>
+					<li>5号线</li>
+					<li>6号线</li>
+					<li>7号线</li>
+					<li>8号线</li>
+					<li>9号线</li>
+					<li>10号线</li>
+				</ul>
+			</div>
+			<div class="type-show" v-show="mes===1">
+				<ul class="type-child-child price-child">
+					<li>不限</li>
+					<li>200万以下</li>
+					<li>200-250万</li>
+					<li>250-300万</li>
+					<li>300-400万</li>
+					<li>400-500万</li>
+					<li>500-800万</li>
+					<li>800-1000万</li>
+					<li>1000万以上</li>
+					<li>自定义价格
+						<input type="text" placeholder="最小">-
+						<input type="text" placeholder="最大">
+						<button>确定</button>
+					</li>
+				</ul>
+			</div>
+			<div class="type-show" v-show="mes===2">
+				<ul class="type-child-child layout-child">
+					<li>1室</li>
+					<li>2室</li>
+					<li>3室</li>
+					<li>4室</li>
+					<li>5室及以上</li>
+					<li><button>确&nbsp;定</button></li>
+				</ul>
+			</div>
+			<div class="type-show" v-show="mes===3">
+				<ul class="type-child">
+					<li @click="msg=0" :class="{'active':msg===0}">区域</li>
+					<li @click="msg=1" :class="{'active':msg===1}">地铁</li>
+				</ul>
+				<ul class="type-child-child" v-show="msg===0">
+					<li>不限</li>
+					<li>东城</li>
+					<li>西城</li>
+					<li>朝阳</li>
+					<li>海淀</li>
+					<li>丰台</li>
+					<li>石景山</li>
+					<li>通州</li>
+					<li>昌平</li>
+					<li>大兴</li>
+					<li>10号线</li>
+				</ul>
+				<ul class="type-child-child" v-show="msg===1">
+					<li>不限</li>
+					<li>1号线</li>
+					<li>2号线</li>
+					<li>3号线</li>
+					<li>4号线</li>
+					<li>5号线</li>
+					<li>6号线</li>
+					<li>7号线</li>
+					<li>8号线</li>
+					<li>9号线</li>
+					<li>10号线</li>
+				</ul>
+			</div>
+		</div>
+		<div class="recom">
+			<div class="house-list">
+				<a :href="'./xiangqing.html'" class="house-item">
+					<div class="house">
+						<img src="./image/head_bg.jpg">
+						<p>天地源七里香都 4室2厅 438万</p>
+						<div class="house-des"><span>4室2厅</span>/<span>129m</span>/<span>南</span>/<span>湖东</span></div>
+						<div class="house-des"><b>438万</b>&nbsp;&nbsp;<span>33954元/平</span></div>
+						<div class="tag">
+							<span class="time">随时看房</span>
+							<span class="elevator">有电梯</span>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="house-item">
+					<div class="house">
+						<img src="./image/head_bg.jpg">
+						<p>天地源七里香都 4室2厅 438万</p>
+						<div class="house-des"><span>4室2厅</span>/<span>129m</span>/<span>南</span>/<span>湖东</span></div>
+						<div class="house-des"><b>438万</b>&nbsp;&nbsp;<span>33954元/平</span></div>
+						<div class="tag">
+							<span class="time">随时看房</span>
+							<span class="elevator">有电梯</span>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="house-item">
+					<div class="house">
+						<img src="./image/head_bg.jpg">
+						<p>天地源七里香都 4室2厅 438万</p>
+						<div class="house-des"><span>4室2厅</span>/<span>129m</span>/<span>南</span>/<span>湖东</span></div>
+						<div class="house-des"><b>438万</b>&nbsp;&nbsp;<span>33954元/平</span></div>
+						<div class="tag">
+							<span class="time">随时看房</span>
+							<span class="elevator">有电梯</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- <div class="footer">
+			<ul class="footer-nav">
+				<li @click="msg=0" :class="{'active':msg===0}">链家分站</li>
+				<li @click="msg=1" :class="{'active':msg===1}">热门城市</li>
+			</ul>
+			<ul class="footer-child clearfix" v-show="msg===0">
+				<li><a href="#">北京链家</a></li>
+				<li><a href="#">北京链家</a></li>
+				<li><a href="#">北京链家</a></li>
+				<li><a href="#">北京链家</a></li>
+				<li><a href="#">北京链家</a></li>
+				<li><a href="#">北京链家</a></li>
+				<li><a href="#">北京链家</a></li>
+				<li><a href="#">北京链家</a></li>
+				<li><a href="#">北京链家</a></li>
+			</ul>
+			<ul class="footer-child clearfix" v-show="msg===1">
+				<li><a href="#">上海链家</a></li>
+				<li><a href="#">上海链家</a></li>
+				<li><a href="#">上海链家</a></li>
+				<li><a href="#">上海链家</a></li>
+				<li><a href="#">上海链家</a></li>
+				<li><a href="#">上海链家</a></li>
+				<li><a href="#">上海链家</a></li>
+				<li><a href="#">上海链家</a></li>
+				<li><a href="#">上海链家</a></li>
+			</ul>
+		</div> -->
+	</div>
+	<script type="text/javascript" src="./js/ershoufang.js"></script>
+</body>
+</html>
+</html>

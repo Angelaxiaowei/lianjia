@@ -1,0 +1,256 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a, li {
+	text-decoration: none;
+	list-style: none;
+}
+.header {
+	position: relative;
+	width: 100%;
+	height: 14rem;
+	background: url("../images/head_bg.jpg") no-repeat center;
+	background-size: cover;
+}
+.header .search-btn {
+	width: auto;
+	background: #fff;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+	border-radius: .1rem;
+}
+.header i {
+	background: url("../images/sprite1.svg") no-repeat 0 -13.125rem;
+    background-size: 2rem 62.375rem;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	left: .2rem;
+}
+.header p {
+	color: #fff;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 13rem;
+	text-align: center;
+	text-shadow: 1px 1px 10px #777;
+	letter-spacing: .07rem;
+}
+.header input {
+	width: 88%;
+	height: 2.2rem;
+	margin-left: 2.6rem;
+	border: 0;
+}
+.header .location {
+	display: block;
+	background: rgba(0,0,0,0.6);
+	color: #fff;
+	width: 3.8rem;
+	height: 1.5rem;
+	border-radius: 2rem;
+	text-align: center;
+	line-height: 1.5rem;
+	font-size: 13px;
+	position: absolute;
+	top: .8rem;
+	left: .7rem;
+}
+.header .user {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	background: url("../images/sprite1.svg") no-repeat 0 -13.9625rem;
+	background-size: 1.8rem;
+	position: absolute;
+	top: .3rem;
+	right: .5rem;
+}	
+.nav {
+	padding: .5rem 0 1rem;
+}
+.nav li {
+	float: left;
+	text-align: center;
+	width: 25%;
+}
+.clearfix::after {
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+.nav li a {
+	font-size: 14px; 
+	display: block;
+	margin-bottom: .8rem;
+	width: 100%;
+	color: #000;
+}
+.nav .nav-icon {
+	width: 2rem;
+	height: 2rem;
+	margin: .5rem auto;
+	background: url("../images/sprite.svg") no-repeat;
+	background-size: 2rem 92rem;
+}
+.nav .ershoufang {
+	background-position: 0 -7.875rem;
+}
+.nav .xinfang {
+	background-position: 0 -15.75rem;
+}
+.nav .zufang {
+	background-position: 0 -23.625rem;
+}
+.nav .maifang {
+	background-position: 0 -10.5rem;
+}
+.nav .lvju {
+	background-position: 0 -89.3125rem;
+}
+.nav .haiwai {
+	background-position: 0 -26.25rem;
+}
+.nav .chachengjiao {
+	background-position: 0 -2.625rem;
+}
+.nav .zhaoxiaoqu {
+	background-position: 0 -73.5rem;
+}
+.tool,.recom {
+	padding: 1rem 0;
+	font-size: 14px;
+}
+.tool-list {
+	width: 100%;
+	margin: 1rem auto;
+}
+.tool h2, .recom h2 {
+	color: #333;
+	padding: 0 1.5rem;
+	font-size: 1rem;
+	font-weight: 700;
+}
+.tool .tool-box {
+	display: inline-block;
+	color: #000;
+	width: 32%;
+	text-align: center;
+}
+.tool .tool-icon {
+	width: 2rem;
+	height: 2rem;
+	margin: .7rem auto;
+	background: url("../images/sprite.svg") no-repeat;
+	background-size: 2rem 92rem;
+}
+.tool .jingjiren {
+	background-position: 0 -63rem;
+}
+.tool .baike {
+	background-position: 0 -49.875rem;
+}
+.tool .kefu {
+	background-position: 0 -70.875rem;
+}
+.house-item {
+	display: block;
+	padding: 0 1.5rem;
+	margin-bottom: .8rem;
+}
+.house {
+	padding: 2rem 0 1rem 7.5rem;
+	position: relative;
+	color: #000;
+	font-size: 13px;
+}
+.house img {
+	width: 6.5rem;
+	height: 4.68rem;
+	position: absolute;
+	top: 2.1rem;
+	left: 0;
+}
+.house p {
+	font-size: 15px;
+	color: #333;
+	margin-bottom: .2rem;
+}
+.house span {
+	color: #777;
+	font-size: 13px;
+}
+.house b {
+	color: red;
+}
+.house .price {
+	font-size: 11px;
+}
+.tag {
+	font-size: 11px;
+	margin-top: .3rem;
+}
+.tag .time {
+	color: #83c44e;
+	margin-right: .5rem;
+}
+.tag .elevator {
+	color: #2196f3;
+}
+.house-item .mes {
+	font-size: 13px;
+	color: #777;
+}
+.footer {
+	background: #2f3130;
+	color: #727373;
+	padding: 1rem 0;
+	text-align: center;
+}
+.footer-nav li {
+	display: inline-block;
+	width: 44%;
+	height: 2rem;
+	line-height: 2rem;
+	cursor: pointer;
+	background: #212121;
+	color: #6e6e6e;
+	font-weight: 700;
+	font-size: 14px;
+}
+.footer-nav .active {
+	color: #fff;
+	background: #3c3f3d;
+}
+.footer-nav li:first-child {
+	margin-right: 1rem;
+}
+.footer-child {
+	margin: 1rem 0;
+}
+.footer-child li {
+	float: left;
+	display: block;
+	width: 33%;
+	margin-bottom: .5rem;
+}
+.footer-child a {
+	width: 100%;
+	color: #727373;
+	font-size: 14px;
+	position: relative;
+}
+.footer-child a:before {
+	content: "";
+	width: .3rem;
+	height: .3rem;
+	border-radius: .3rem;
+	position: absolute;
+	top: .38rem;
+	left: -1rem;
+	background: #727373;
+}
